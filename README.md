@@ -28,6 +28,6 @@ sudo systemctl start elasticsearch.servicerp
 rpm -i logstash-5.6.3.rpm
 sudo systemctl start logstash.servicerp
 
-rpm -i kibana-5.6.3-
+rpm -i kibana-5.6.3.rpm
 service kibana start
 ```
