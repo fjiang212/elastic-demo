@@ -17,17 +17,32 @@ yum install git -y
  ```
  
 # Download and Install Elastic Stack
+
+## Install Elastic Stack
 ```
 rpm -i jdk-8u152-linux-x64.rpm
 
 rpm -i elasticsearch-5.6.3.rpm
-sudo systemctl daemon-reload
-sudo systemctl enable elasticsearch.service
-sudo systemctl start elasticsearch.servicerp
+systemctl daemon-reload
+systemctl enable elasticsearch.service
 
 rpm -i logstash-5.6.3.rpm
-sudo systemctl start logstash.servicerp
 
-rpm -i kibana-5.6.3.rpm
+rpm -i kibana-5.6.3-x86_64.rpm
+systemctl daemon-reload
+systemctl enable kibana.service
+
+rpm -i filebeat-5.6.3-x86_64.rpm
+```
+
+## Config Elastic Stack
+```
+```
+
+## Start Elastic Stack
+```
+service elasticsearch start
+systemctl start logstash.servicer
 service kibana start
+service filebeat start
 ```
