@@ -1,6 +1,8 @@
 # Prepare Virtual Machine
 * Install Virtual Box for windows: available from https://www.virtualbox.org/wiki/Downloads
 * Install Centos 7: https://github.com/fjiang212/my-notes/blob/master/vitualization/notes.md
+* Set up Network NAT port forward
+![Screenshot](NAT_PortForward.PNG)
 * Set up yum proxy if needed (/etc/yum.conf)
 ```  
 proxy=http://x.x.x.x:xxxx
@@ -15,7 +17,12 @@ yum install lsof -y
 yum install nmap -y
 yum install git -y
  ```
- 
+* Stop and disable firewall on CentOS 7
+```
+systemctl disable firewalld
+systemctl stop firewalld
+```
+http://bytefreaks.net/gnulinux/how-to-startstop-or-enabledisable-firewalld-on-centos-7
 # Download and Install Elastic Stack
 
 ## Install Elastic Stack
