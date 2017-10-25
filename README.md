@@ -22,6 +22,10 @@ yum install git -y
 systemctl disable firewalld
 systemctl stop firewalld
 ```
+* Sync guess host time
+```
+hwclock --systohc
+```
 http://bytefreaks.net/gnulinux/how-to-startstop-or-enabledisable-firewalld-on-centos-7
 # Download and Install Elastic Stack
 
