@@ -25,7 +25,7 @@ systemctl stop firewalld
 http://bytefreaks.net/gnulinux/how-to-startstop-or-enabledisable-firewalld-on-centos-7
 # Download and Install Elastic Stack
 
-## Install Elastic Stack
+## Install Elastic Stack and X-Pack
 ```
 rpm -i jdk-8u152-linux-x64.rpm
 
@@ -43,13 +43,19 @@ rpm -i filebeat-5.6.3-x86_64.rpm
 ```
 
 ## Config Elastic Stack
+* Edit /etc/elasticsearch/elasticsearch.yml
 ```
+network.host: 0.0.0.0
+```
+* Edit /etc/kibana/kibana.yml
+```
+server.host: 0.0.0.0
 ```
 
 ## Start Elastic Stack
 ```
 service elasticsearch start
-systemctl start logstash.servicer
+service lostash start
 service kibana start
 service filebeat start
 ```
