@@ -32,12 +32,14 @@ rpm -i jdk-8u152-linux-x64.rpm
 rpm -i elasticsearch-5.6.3.rpm
 systemctl daemon-reload
 systemctl enable elasticsearch.service
-
+/usr/share/elasticsearch/bin/elasticsearch-plugin install file:/root/x-pack-5.6.3.zip
+ 
 rpm -i logstash-5.6.3.rpm
 
 rpm -i kibana-5.6.3-x86_64.rpm
 systemctl daemon-reload
 systemctl enable kibana.service
+/usr/share/kibana/bin/kibana-plugin install file:/root/x-pack-5.6.3.zip
 
 rpm -i filebeat-5.6.3-x86_64.rpm
 ```
