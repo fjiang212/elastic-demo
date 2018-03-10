@@ -47,7 +47,7 @@ rpm -i logstash-6.2.2.rpm
 ```
 * Install Kibana
 ```
-rpm -i kibana-5.6.3-x86_64.rpm
+rpm -i kibana-6.2.2-x86_64.rpm
 systemctl daemon-reload
 systemctl enable kibana.service
 /usr/share/kibana/bin/kibana-plugin install file:/root/x-pack-6.2.2.zip
