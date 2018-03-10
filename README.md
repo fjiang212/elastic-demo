@@ -30,21 +30,30 @@ http://bytefreaks.net/gnulinux/how-to-startstop-or-enabledisable-firewalld-on-ce
 # Download and Install Elastic Stack
 
 ## Install Elastic Stack and X-Pack
+* Install JDK
 ```
 rpm -i jdk-8u152-linux-x64.rpm
-
-rpm -i elasticsearch-5.6.3.rpm
+```
+* Install Elasticsearch: https://www.elastic.co/guide/en/elasticsearch/reference/current/rpm.html
+```
+rpm -i elasticsearch-6.2.2.rpm
 systemctl daemon-reload
 systemctl enable elasticsearch.service
-/usr/share/elasticsearch/bin/elasticsearch-plugin install file:/root/x-pack-5.6.3.zip
- 
-rpm -i logstash-5.6.3.rpm
-
+/usr/share/elasticsearch/bin/elasticsearch-plugin install file:/root/x-pack-6.2.2.zip 
+```
+* Install Logstash: 
+```
+rpm -i logstash-6.2.2.rpm
+```
+* Install Kibana
+```
 rpm -i kibana-5.6.3-x86_64.rpm
 systemctl daemon-reload
 systemctl enable kibana.service
-/usr/share/kibana/bin/kibana-plugin install file:/root/x-pack-5.6.3.zip
-
+/usr/share/kibana/bin/kibana-plugin install file:/root/x-pack-6.2.2.zip
+```
+* Install Filebeat
+```
 rpm -i filebeat-5.6.3-x86_64.rpm
 ```
 
