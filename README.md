@@ -2,7 +2,7 @@
 * Install Virtual Box for windows: available from https://www.virtualbox.org/wiki/Downloads
 * Install Centos 7: https://github.com/fjiang212/my-notes/blob/master/vitualization/vituralbox.md
 * Set up Network NAT port forward
-![Screenshot](NAT_PortForward.PNG)
+![Screenshot](images/NAT_PortForward.PNG)
 * Set up yum proxy if needed (/etc/yum.conf)
 ```  
 proxy=http://x.x.x.x:xxxx
