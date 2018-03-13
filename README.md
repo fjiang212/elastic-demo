@@ -12,7 +12,9 @@ proxy_password=xxxxx
 * Install tools
 ```
 yum install dos2unix -y
-yum install net-tools -y 
+yum install net-tools -y
+yum install tree -y 
+yum install wget -y 
 yum install lsof -y
 yum install nmap -y
 yum install git -y
